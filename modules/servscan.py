@@ -9,7 +9,7 @@ def portscan(hostname):
     Scan for open ports on a target device.
     """
     if len(hostname) > 0:
-        target = socket.gethostbyname('localhost') # Translate hostname to IPv4
+        target = socket.gethostbyname(hostname) # Translate hostname to IPv4
     else:
         print("Invalid amount of arguments. Please provide a target hostname or IP address.")
         # sys.exit()
