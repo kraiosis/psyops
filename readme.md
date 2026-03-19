@@ -21,6 +21,7 @@ This project provides a set of tools for server and terminal administration and 
      - Process Scanning: `python modules/processchk.py`
      - Check Performance: `python modules/stats.py`
      - Get Logged-in Users: `python modules/users.py`
+     - Check installed Software: `python modules/software.py`
      - Memory Game: `python modules/memgame.py`
 
 ## Modules
@@ -29,6 +30,7 @@ This project provides a set of tools for server and terminal administration and 
 - `modules/processchk.py`: Process Scanning module.
 - `modules/stats.py`: System Performance module.
 - `modules/users.py`: Get Logged-in Users module.
+- `modules/software.py`: Check installed Software module.
 - `modules/memgame.py`: Memory Game module.
 
 ## License

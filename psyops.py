@@ -5,10 +5,24 @@
 # Revision: 1
 # Requires:psutil library | run: pip install psutil
 
+# check if psutil is installed
+import sys
+import importlib.util
+spec = importlib.util.find_spec("psutil")
+if spec is None:
+    if(sys.platform == "win32"):
+        print("psutil is not installed. Please install it using 'pip install psutil'")
+        exit()
+    else:
+        print("psutil is not installed. Please install it using 'sudo apt install python3-psutil'")
+        exit()
+
+
 from modules.servscan import portscan  
 from modules.processchk import proscan
 from modules.stats import monitor_resources
 from modules.users import get_current_users
+from modules.software import check_installed_software
 from modules.memgame import memgame
 
 def menu_driven_app():
@@ -22,7 +36,8 @@ def menu_driven_app():
         print("2. Process Scanning")
         print("3. Check performance")
         print("4. Get logged in users")
-        print("5. Memory Game")
+        print("5. Check installed software")
+        print("6. Memory Game")
         print("Q. Quit the application")
 
         # Get user input and convert to lowercase for easier handling
@@ -37,6 +52,7 @@ def menu_driven_app():
 
         if choice == '1':
             print("\n>> Port Scanning...")
+            print("Disclaimer: This will scan all ports on the target. \nScanning can take some time depending on the target. \nScanning is not recommended for large networks. \nScanning networks without permissions is iligal")
             host = input("Enter the host IP address: ")            
             portscan(host)
         elif choice == '2':
@@ -51,6 +67,10 @@ def menu_driven_app():
             # Add code here for getting logged in users
             get_current_users()
         elif choice == '5':
+            print("\n>> Getting installed software...")
+            check_installed_software()
+            
+        elif choice == '6':
             print("\n>> Memgame...")
             # Add code here for memgame
             memgame()
