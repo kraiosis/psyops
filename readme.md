@@ -22,7 +22,7 @@ This project provides a set of tools for server and terminal administration and 
      - Check Performance: `python modules/stats.py`
      - Get Logged-in Users: `python modules/users.py`
      - Check installed Software: `python modules/software.py`
-     - Get all devices on your netwotk: `python modules/netscan.py`
+     - Get all devices on your network: `python modules/netscan.py`
      - Memory Game: `python modules/memgame.py`
 
 ## Modules
