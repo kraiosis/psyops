@@ -24,6 +24,7 @@ from modules.stats import monitor_resources
 from modules.users import get_current_users
 from modules.software import check_installed_software
 from modules.memgame import memgame
+from modules.netscan import netscan
 
 def menu_driven_app():
     """
@@ -37,7 +38,8 @@ def menu_driven_app():
         print("3. Check performance")
         print("4. Get logged in users")
         print("5. Check installed software")
-        print("6. Memory Game")
+        print("6. Network Scanning")
+        print("7. Memory Game")
         print("Q. Quit the application")
 
         # Get user input and convert to lowercase for easier handling
@@ -69,8 +71,12 @@ def menu_driven_app():
         elif choice == '5':
             print("\n>> Getting installed software...")
             check_installed_software()
-            
         elif choice == '6':
+            print("\n>> Netscanning...")
+            # Add code here for netscanning
+            netvalue = input("IP/Mask address (192.168.1.0/24): ")            
+            netscan(netvalue)
+        elif choice == '7':
             print("\n>> Memgame...")
             # Add code here for memgame
             memgame()
@@ -78,7 +84,7 @@ def menu_driven_app():
             print("\n>> Exiting application. Goodbye!")
             break  # Exit the while loop
         else:
-            print("\n>> Invalid input. Please select a valid option (1, 2, 3, or Q).")
+            print("\n>> Invalid input. Please select a valid option (1, 2, 3, 4, 5, 6 or Q).")
 
 # Run the application
 if __name__ == "__main__":

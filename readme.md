@@ -10,7 +10,7 @@ This project provides a set of tools for server and terminal administration and 
 
 1. Clone the repository.
 2. Install the required dependencies:
-   - psutil library: `pip install psutil`
+   - psutil library: `pip install psutil networkscan`
 
 ## Usage
 
@@ -22,6 +22,7 @@ This project provides a set of tools for server and terminal administration and 
      - Check Performance: `python modules/stats.py`
      - Get Logged-in Users: `python modules/users.py`
      - Check installed Software: `python modules/software.py`
+     - Get all devices on your netwotk: `python modules/netscan.py`
      - Memory Game: `python modules/memgame.py`
 
 ## Modules
@@ -31,6 +32,7 @@ This project provides a set of tools for server and terminal administration and 
 - `modules/stats.py`: System Performance module.
 - `modules/users.py`: Get Logged-in Users module.
 - `modules/software.py`: Check installed Software module.
+- `modules/netscan.py` : Get all devices on your netwotk.
 - `modules/memgame.py`: Memory Game module.
 
 ## License
